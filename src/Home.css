@@ -1,0 +1,26 @@
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.grid {
+    margin: 5rem auto;
+    padding: 5rem auto;
+}
+
+.overlay-image {
+    position: absolute;
+    width: 100%;
+    color: white;
+    font-size: 10pt;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 5px;
+    justify-self: center;
+    height: auto;
+    margin: 5px;
+}
+
