@@ -8,6 +8,15 @@ export default class Show extends Component {
         let ParkData = this.props.parks.find(value =>
             value.id === parkID
         )
+        // let parkDataImages = ParkData.images;
+        //     parkDataImages.shift()
+        //     console.log (parkDataImages)
+
+        const parkImages = ParkData.images.map((value, index) =>  //map over 
+            <div key={index}>
+                <img src={value.url}></img>
+            </div>
+        )
         return (
             <div>
                 <div>
@@ -28,9 +37,10 @@ export default class Show extends Component {
                 <h4>{ParkData.directionsInfo} </h4>
 
                 <div>
-                <img src={ParkData.images[1].url}></img>
+                    {/* <img src={ParkData.images[1].url}></img>
                 <img src={ParkData.images[2].url}></img>
-                <img src={ParkData.images[3].url}></img>
+                <img src={ParkData.images[3].url}></img> */}
+                    {parkImages} 
                 </div>
 
                 <div>
