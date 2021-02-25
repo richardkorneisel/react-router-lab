@@ -8,7 +8,7 @@ export default class Show extends Component {
         let ParkData = this.props.parks.find(value =>
             value.id === parkID
         )
-        // let parkDataImages = ParkData.images;
+        let parkDataImages = ParkData.images;
         //     parkDataImages.shift()
         //     console.log (parkDataImages)
 
@@ -17,6 +17,7 @@ export default class Show extends Component {
                 <img src={value.url}></img>
             </div>
         )
+        parkImages.shift()
         return (
             <div>
                 <div>
